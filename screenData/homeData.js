@@ -1,7 +1,7 @@
 export default {
   'links': [{
     'id': 'RECEIVING',
-    'title': 'SSO',
+    'title': 'RECEIVING',
     'icon': require('../styles/images/home-receiving-icon.png'),
     'availableForYards' : 'ALL',
     'exceptYards': [],
