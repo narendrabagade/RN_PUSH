@@ -9,7 +9,7 @@ export default {
   },
   {
     'id': 'IMAGES',
-    'title': 'IMAGES',
+    'title': 'IMAGES_PENDING',
     'icon': require('../styles/images/home-image-retake-icon.png'),
     'availableForYards' : 'ALL',
     'exceptYards': [],

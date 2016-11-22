@@ -88,14 +88,18 @@ export default class RN_PUSH extends Component {
 // Fully silent update which keeps the app in
 // sync with the server, without ever
 // interrupting the end user
-RN_PUSH = codePush(RN_PUSH);
+//RN_PUSH = CodePush(RN_PUSH);
 
 /*Same as 1, except we check for updates, or apply an update if one exists every time the app returns to the foreground after being “backgrounded”*/
-//RN_PUSH = codePush({ checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME, installMode: CodePush.InstallMode.ON_NEXT_RESUME })(RN_PUSH);
+RN_PUSH = CodePush({ checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME, installMode: CodePush.InstallMode.ON_NEXT_RESUME })(RN_PUSH);
 
 /* Active update, which lets the end user know
  about each update, and displays it to them
  immediately after downloading it*/
-//RN_PUSH = codePush({ updateDialog: true, installMode: CodePush.InstallMode.IMMEDIATE })(RN_PUSH);
+//  var updateDialogOptions = {
+//         updateTitle: "You have an update",
+//         mandatoryContinueButtonLabel:"Install"
+//     };
+// RN_PUSH = CodePush({ updateDialog: true, installMode: CodePush.InstallMode.IMMEDIATE })(RN_PUSH);
 
 AppRegistry.registerComponent('RN_PUSH', () => RN_PUSH);
